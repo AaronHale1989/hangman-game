@@ -1,0 +1,18 @@
+#letters {
+  border: 2px #f4f141; }
+
+#guessing {
+  border: 2px solid blue;
+  height: 50px;
+  width: 45%; }
+
+#newWord {
+  width: 50px;
+  border: 2px solid red; }
+
+#answer {
+  border: 2px solid purple;
+  position: relative;
+  left: 350px; }
+
+/*# sourceMappingURL=main.css.map */
