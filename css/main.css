@@ -29,6 +29,13 @@ body {
   margin-left: 35%;
   margin-right: 30%; }
 
+#title2 {
+  font-family: marker felt;
+  position: relative;
+  top: 30px;
+  margin-left: 47%;
+  margin-right: 30%; }
+
 #newWord {
   width: 100px;
   height: 40px;
@@ -73,7 +80,6 @@ body {
   top: 208px;
   left: 760px;
   font-family: marker felt;
-  border: 2px solid white;
   height: 28px;
   width: 20%;
   text-align: center;
