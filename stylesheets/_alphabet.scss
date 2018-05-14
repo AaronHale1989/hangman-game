@@ -1,4 +1,34 @@
+
+body {
+	background-color:$background-color;
+}
+
+
+
+
+
+
 #letters {
-	border:2px #f4f141;
+	// border:2px solid red;
+	position:$position-setting;
+	top:250px;
+	width:480px;
+	margin-left:24%;
+	margin-right:25%;
+	margin-bottom:100px;
 	
+}
+
+.alphabets {
+	@include box-size(40px, 40px, $box-background-color);
+	margin: 4px;
+	text-align:$text-align;
+    display:inline-block;
+	border:2px #f4f141 solid;
+	font-family:$main-font;
+
+}
+
+.alphabets:hover {
+	background-color:red;
 }

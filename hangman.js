@@ -5,9 +5,11 @@ window.onload = function (){
 	var letters = document.getElementById("letters");
 	var guessing = document.getElementById("guessing");
 	var hints = document.getElementById("hints");
+	var wrongLetter = document.getElementById("wrongLetter");
+	var livesLeft = document.getElementById("livesLeft");
 
-	var wordArray = ["HOAGIE","LEMON","ELEPHANT","BASKETBALL"];
-	var hintArray = ["Philly Sandwich","Something Tart","Giant Footprints","Toss me the Rock"];
+	var wordArray = ["HOAGIE","LEMON","ELEPHANT","BASKETBALL","Rose","Shovel"];
+	var hintArray = ["Philly Sandwich","Something Tart","Giant Footprints","Nothing But Net","Pink Table Wine", "A Metal Spade"];
 	var ran = (Math.floor(Math.random()* wordArray.length));
 	var currentWord = wordArray[ran];
 	var currentHint = hintArray[ran];
@@ -17,6 +19,8 @@ window.onload = function (){
 	var wrongGuess =[];
 	var remainingLetters = wordToGuess.length;
 	var lives = 5;
+	livesLeft.innerHTML = "Remaining Guesses:" + " " + lives;
+
 	
 	console.log(wordToGuess);
 
@@ -25,16 +29,14 @@ window.onload = function (){
 	var letterArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 	var myGuess; 
 
+	newWord.addEventListener("click",function(){
+		location.reload();
+
+	})
+
 	for(let i =0;i<letterArray.length;i++){
 		var box = document.createElement("div");
 		box.setAttribute("class","alphabets")
-		box.style.width = "20px";
-		box.style.height = "20px";
-		box.style.margin = ' 2px';
-		box.style.textAlign = 'center';
-		box.style.display = "inline-block";
-		box.style.backgroundColor = "#42a7f4";
-		box.style.border = "2px #f4f141 solid"
 		box.innerHTML = letterArray[i]
 		letters.appendChild(box)
 		box = document.getElementsByClassName('alphabets')
@@ -53,10 +55,10 @@ for(var i =0;i<wordToGuess.length;i++){
 			answerBox.style.margin = ' 2px';
 			answerBox.style.textAlign = 'center';
 			answerBox.style.display = "inline-block";
-			answerBox.style.backgroundColor = "#42a7f4";
+			answerBox.style.backgroundColor = "#ffcc00";
 			answerBox.style.border = "2px solid white";
 			answerBox.innerHTML = wordToGuess[i];
-			answerBox.style.color = "#42a7f4";
+			answerBox.style.color = "#ffcc00";
 			answer.appendChild(answerBox);
 			box2 = document.getElementsByClassName('answerBox')
 
@@ -66,7 +68,7 @@ for(var i =0;i<wordToGuess.length;i++){
 	function guess(){
 		for(let i =0;i<wordToGuess.length;i++){ 
 			if(wordToGuess[i] === myGuess){				
-				box2[i].style.color = "#f4f141";	
+				box2[i].style.color = "black";	
 				console.log(true)
 				correctGuess.push(myGuess);	
 				console.log(correctGuess);
@@ -80,7 +82,9 @@ for(var i =0;i<wordToGuess.length;i++){
 				wrongGuess.push(myGuess);
 				console.log(wrongGuess + " " + "nope");
 				countDown1();
+				wrongLetter.innerHTML = wrongGuess;
 			}
+			livesLeft.innerHTML = "Remaining Guesses:" + " " + lives;
 	
 	}
 
@@ -88,10 +92,12 @@ for(var i =0;i<wordToGuess.length;i++){
 		lives -= 1;
 		console.log(lives);
 		if(lives <=0){
-			alert("GAME OVER");
+			setTimeout(function(){
+				alert("GAME OVER");
+			},500)
 			setTimeout(function(){
 				location.reload();
-			},2000)
+			},1000)
 			
 		}
 		
@@ -102,22 +108,11 @@ for(var i =0;i<wordToGuess.length;i++){
 			setTimeout(function(){
 				alert("YOU WIN!");
 				location.reload();
-			},900)
+			},500)
 
 		}
 	}
 
-	
-
-
-
-
-	newWord.addEventListener("click",function(){
-		currentWord = wordArray[(Math.floor(Math.random()* wordArray.length))];
-		wordLetters = currentWord.split("");
-		answer.innerHTML = wordLetters;
-
-	})
 
 
 }

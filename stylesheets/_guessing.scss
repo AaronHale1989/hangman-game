@@ -1,19 +1,85 @@
-#guessing{
-	border:2px solid blue;
-	height:50px;
-	width:45%;
+#title {
+	font-family:$main-font;
+	position:$position-setting;
+	top:30px;
+	margin-left:35%;
+	margin-right:30%;
 }
 
 #newWord {
-	width:50px;
-	border:2px solid red;
+	width:100px;
+	height:40px;
+	// border:2px solid red;
+	position:$position-setting;
+	margin-left:45%;
+	margin-right:25%;
+	text-align:$text-align;
+	font-size:12px;
+}
+
+#newWord:hover {
+	background-color:red;
 }
 
 #answer {
-	
-	border:2px solid purple;
+	width: 30%;
+	border:2px solid white;
+	position:$position-setting;
+	margin-left:33%;
+	margin-right:25%;
+	top:200px;
+	font-family:$main-font;
+}
+
+#wrongText {
+	font-family:$main-font;
 	position:relative;
-	left:350px;
+	left:760px;
+	top:220px;
+	font-size:19px;
+}
+
+#hints {
+	font-family:$main-font;
+	// border:2px solid green;
+	width:20%;
+	text-align:$text-align;
+	position:$position-setting;
+	top:130px;
+	font-size: 25px;
+	margin-left:38%;
+	margin-right:30%;
+	color:$text-color;
+}
+
+#wrongLetter {
+	position:relative;
+	top:208px;
+	left:760px;
+	font-family:$main-font;
+	border: 2px solid white;
+	height:28px;
+	width:20%;
+	text-align:$text-align;
+	font-size:18px;
+}
+
+#newWord {
+	font-size:16px;
+	font-family:$main-font;
+	position:$position-setting;
+	top:130px;
+	right:20px;
+}
+
+#livesLeft {
+	font-family:$main-font;
+	font-size:19px;
+	// border:2px solid;
+	position:$position-setting;
+	top:170px;
+	left:100px;
+	width:100px;
 }
 
 

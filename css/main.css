@@ -1,18 +1,97 @@
-#letters {
-  border: 2px #f4f141; }
+body {
+  background-color: #3eaaff; }
 
-#guessing {
-  border: 2px solid blue;
-  height: 50px;
-  width: 45%; }
+#letters {
+  position: relative;
+  top: 250px;
+  width: 480px;
+  margin-left: 24%;
+  margin-right: 25%;
+  margin-bottom: 100px; }
+
+.alphabets {
+  width: 40px;
+  height: 40px;
+  background-color: #ffcc00;
+  margin: 4px;
+  text-align: center;
+  display: inline-block;
+  border: 2px #f4f141 solid;
+  font-family: marker felt; }
+
+.alphabets:hover {
+  background-color: red; }
+
+#title {
+  font-family: marker felt;
+  position: relative;
+  top: 30px;
+  margin-left: 35%;
+  margin-right: 30%; }
 
 #newWord {
-  width: 50px;
-  border: 2px solid red; }
+  width: 100px;
+  height: 40px;
+  position: relative;
+  margin-left: 45%;
+  margin-right: 25%;
+  text-align: center;
+  font-size: 12px; }
+
+#newWord:hover {
+  background-color: red; }
 
 #answer {
-  border: 2px solid purple;
+  width: 30%;
+  border: 2px solid white;
   position: relative;
-  left: 350px; }
+  margin-left: 33%;
+  margin-right: 25%;
+  top: 200px;
+  font-family: marker felt; }
+
+#wrongText {
+  font-family: marker felt;
+  position: relative;
+  left: 760px;
+  top: 220px;
+  font-size: 19px; }
+
+#hints {
+  font-family: marker felt;
+  width: 20%;
+  text-align: center;
+  position: relative;
+  top: 130px;
+  font-size: 25px;
+  margin-left: 38%;
+  margin-right: 30%;
+  color: white; }
+
+#wrongLetter {
+  position: relative;
+  top: 208px;
+  left: 760px;
+  font-family: marker felt;
+  border: 2px solid white;
+  height: 28px;
+  width: 20%;
+  text-align: center;
+  font-size: 18px; }
+
+#newWord {
+  font-size: 16px;
+  font-family: marker felt;
+  position: relative;
+  top: 130px;
+  right: 20px; }
+
+#livesLeft {
+  font-family: marker felt;
+  font-size: 19px;
+  position: relative;
+  top: 170px;
+  left: 100px;
+  width: 100px; }
 
 /*# sourceMappingURL=main.css.map */
